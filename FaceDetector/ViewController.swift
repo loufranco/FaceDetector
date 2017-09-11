@@ -109,7 +109,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         }
 
         // The orientation should be determined from the phone position, but assume portrait for now
-        let imageRequestHandler = VNImageRequestHandler(cvPixelBuffer:imageBuffer, orientation: 1, options: requestOptions)
+        let imageRequestHandler = VNImageRequestHandler(cvPixelBuffer:imageBuffer, orientation: .up, options: requestOptions)
 
         do {
             try imageRequestHandler.perform(self.requests)
